@@ -1,0 +1,75 @@
+<!-- <p>userpage works!</p> -->
+
+<div class="nav-box">
+    <button (click)="home()">🏠Pextra</button>
+    
+        <button (click)="expenses()">Expenses</button>
+        <button (click)="profile()">Profile</button>
+        <button (click)="Ofeatures()">Other Features</button>
+    
+    <button (click)="logout()">LogOut</button>
+</div>
+
+<!-- {{Userdetails.name}} -->
+<div [ngSwitch]="page">
+
+    <!--HOME-->
+    <div *ngSwitchCase="0">
+        HOME
+    </div>
+
+    <!-- Expenses -->
+    <div *ngSwitchCase="1" class="expenses">
+        <!-- Expenses -->
+        <button class="btn btn-sm btn-info" id="expbut">
+                <div style="font-size:10mm ">+</div>INPUT Expense</button>
+        <table>
+            <tr>
+                <th>Expense</th>
+                <th>Date</th>
+                <th>Cost</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+        </table>
+        
+        
+    </div>
+
+    <!-- Profile -->
+    <div *ngSwitchCase="2" class="details">
+        <form #a="ngForm">
+            
+            <input hidden type="number" name="uid" [ngModel]="Userdetails.uid" ngModel required>
+            <div>Mobile   : <input type="number" name="mobile" [ngModel]="Userdetails.mobile" ngModel  required></div> 
+            <div>Name     : <input type="text" name="name" [ngModel]="Userdetails.name" ngModel required></div>
+            <div>UserName : <input type="text" name="uname" [ngModel]="Userdetails.uname" ngModel required></div>
+            <div>Password : <input type="password" name="pwd" [ngModel]="Userdetails.pwd" ngModel required></div>
+            <!--[type]="ShoworHide? 'text':'password'" <mat-icon matSuffix (click)="togglePassword()">
+                {{ShoworHide?'visibility_off':'visibility'}}
+            </mat-icon> -->
+            <div>Salary   : <input type="number" name="salary" [ngModel]="Userdetails.salary" ngModel required></div>
+            <div><button type="submit" (click)="update(a.value)">UPDATE</button></div>
+
+        </form>
+        <!-- {{Userdetails.values}} -->
+    </div>
+
+    <!-- Other -->
+    <div *ngSwitchCase="3">
+        Other
+    </div>
+
+
+</div>
+
+

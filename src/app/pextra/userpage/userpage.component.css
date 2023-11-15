@@ -1,0 +1,46 @@
+
+.details input{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid;
+    animation: colour-change 10s infinite;
+}
+
+.details{
+    display: grid;
+    text-align: center;
+    flex-direction: column;
+}
+
+.details form{
+    display: grid;
+    text-align: center;
+    flex-direction: column;
+}
+
+.nav-box{
+    text-align: center;
+    margin: 7%;
+    
+}
+.nav-box button{
+    margin: 0 10px;
+}
+
+div[ngSwitchCase=“1”] 
+{
+    align-self: center;
+}
+
+#expbut
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.expenses
+{
+    position: absolute;
+    left: 35%;
+}
