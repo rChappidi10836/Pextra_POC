@@ -1,0 +1,62 @@
+<!-- <p>userpage works!</p> -->
+<!-- {{ctest}} -->
+
+<div class="nav-box">
+    <button class="btn btn-first" (click)="home()">🏠Pextra</button>
+    
+        <button class="btn btn-primary" (click)="expenses()">Expenses</button>
+        <button class="btn btn-primary" (click)="profile()">Profile</button>
+        <button class="btn btn-primary" (click)="Ofeatures()">Other Features</button>
+    
+    <button class="btn btn-warning" (click)="logout()">LogOut</button>
+</div>
+
+<!-- {{Userdetails.name}} -->
+<div class="page" [ngSwitch]="page">
+
+    <!--HOME-->
+    <div *ngSwitchCase="0">
+        HOME
+    </div>
+
+    <!-- Expenses -->
+    <div *ngSwitchCase="1">
+        
+        Expenses
+    </div>
+
+    <!-- Profile -->
+    <div *ngSwitchCase="2" class="details">
+        <form >
+            <table>
+                <!-- <tr>
+            <td><label for="uid" hidden>UID: </label></td>
+            <td><input hidden type="number" name="uid" value="{{Userdetails.uid}}"><br><br></td></tr>  -->
+            <tr>
+            <td><label for="mobile">Mobile Number: </label></td>
+            <td><input type="number" name="mobile" value="{{Userdetails.mobile}}"><br><br></td></tr> <tr>
+            <td><label for="name">Name: </label></td>
+            <td><input type="text" name="name" value="{{Userdetails.name}}"><br><br></td></tr>  <tr>
+            <td><label for="uname">User Name: </label></td>
+            <td><input type="text" name="uname" value="{{Userdetails.uname}}"><br><br></td></tr> <tr>
+            <td><label for="pwd">Password: </label></td>
+            <td><input type="password" name="pwd" value="{{Userdetails.pwd}}"><br><br></td></tr>  <tr>
+            <!--[type]="ShoworHide? 'text':'password'" <mat-icon matSuffix (click)="togglePassword()">
+                {{ShoworHide?'visibility_off':'visibility'}}
+            </mat-icon> -->
+            <td><label for="salary">Salary: </label></td>
+            <td><input type="number" name="salary" value="{{Userdetails.salary}}"><br><br></td></tr>
+        </table>
+        </form>
+        {{Userdetails.values}}
+    </div>
+
+    <!-- Other -->
+    <div *ngSwitchCase="3">
+        Other
+    </div>
+
+
+</div>
+
+

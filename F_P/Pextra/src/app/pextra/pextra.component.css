@@ -1,0 +1,65 @@
+.entry{
+    margin-top: 108px;
+    text-align: center;
+}
+.label{
+    visibility: hidden;
+}
+.small{
+    color: red;
+}
+input{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid;
+    animation: colour-change 10s infinite;
+}
+
+@keyframes colour-change {
+
+    0% {
+        border-color: violet;
+      }
+      14.28% {
+        border-color: indigo;
+      }
+      28.56% {
+        border-color: blue;
+      }
+      42.84% {
+        border-color: green;
+      }
+      57.12% {
+        border-color: yellow;
+      }
+      71.4% {
+        border-color: orange;
+      }
+      85.68% {
+        border-color: red;
+      } 
+      100%{
+        border-color: aqua;
+      }
+    /* 0% {
+        border-color: red;
+      }
+      25% {
+        border-color: cyan;
+      }
+      50% {
+        border-color: green;
+      }
+      75% {
+        border-color: blueviolet;
+      }
+      100% {
+        border-color: khaki;
+      }
+     */
+}
+
+::placeholder{
+    text-align: center;
+}

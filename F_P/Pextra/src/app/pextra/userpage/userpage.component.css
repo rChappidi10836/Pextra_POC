@@ -1,0 +1,59 @@
+
+input{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid;
+    animation: colour-change 10s infinite;
+}
+
+.details{
+    display: flex-direction;
+    text-align: center;
+    flex-direction: column;
+}
+
+.details form{
+    display: flex-direction;
+    text-align: center;
+    flex-direction: column;
+}
+
+.nav-box {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 30%;
+  }
+  
+.page{
+  margin-top: 10%;
+  display:flex;
+  justify-content: center;
+
+}
+  .nav-box button {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .btn{
+    box-shadow: inset;
+    border-radius: 4px;
+    font-size: 20px;
+  }
+
+  .btn-primary {
+    background-color: #5db9d4;
+    border-color: #04aee2;
+    
+  }
+
+  .btn-first{
+    background-color: aliceblue;
+  }
+
+  .btn-warning{
+    background-color: red;
+  }
+  

@@ -1,0 +1,62 @@
+<!-- <p>pextra works!</p> -->
+<!-- <div class="test" *ngIf="false">
+    <form #f="ngForm">
+        <label for="selectedDate">Date:</label>
+        <input type="date" name="thedhi" id="selectedDate" (change)="onDateChange($event)" ngModel>
+        <p>Selected Date: {{selectedDate}}</p>
+
+        <label for="onadd">submit</label>
+        <p>{{f.value}}</p>
+        <input type="button" id="onadd" name="onadd" title="onadd" value="add" (click)="onadd(f.value)"><br><br><br>
+    </form>
+</div> -->
+
+
+<!-- 
+<form onsubmit="entry()">
+    <input type="text" placeholder="req test" required>
+    <button type="submit">RAIN ON</button>
+</form> 
+-->
+
+<div class="entry" *ngIf="entrypage"><br><br>
+    <button (click)="entry()" mat-raised-button color="primary" [disabled]="registerbutton">SIGN IN</button>&nbsp;
+
+    <button (click)="entry()" mat-raised-button color="primary" [disabled]="!registerbutton">SIGN UP</button><br><br>
+
+
+    <form #k="ngForm" >
+        <div class="registration" *ngIf="!registerbutton; else login">
+            <label for="mobile" hidden>Mobile Number: </label>
+            <input type="text" id="mobile" placeholder="Mobile Number" name="mobile" ngModel required/><br><br>
+            <label for="name" [hidden]="true">Name: </label>
+            <input type="text" id="name" placeholder="Name" name="name" ngModel required/><br><br>
+            <label for="uname" [hidden]="true">Username: </label>
+            <input type="text" id="uname" placeholder="Username" name="uname" ngModel required/><br><br>
+            <label for="pwd" [hidden]="true">Password: </label>
+            <input type="password" id="pwd" placeholder="Password" name="pwd"  ngModel required/><br><br>
+            <label for="salary" [hidden]="true">Salary: </label>
+            <input type="number" id="salary" placeholder="Salary" name="salary" ngModel required/><br><br>
+            <!-- <label for=".">.</label>
+            <input type="button" title="." onclick="RegisterUser" name="RegisterUser"> -->
+            <button mat-raised-button type="submit" (click)="RegisterUser(k.value)">REGISTER</button>
+        </div>
+    </form>
+
+    <ng-template #login>
+        <div class="login">
+            <form #l="ngForm">
+                <label for="uname" [hidden]="true">Username: </label>
+                <input type="text" id="uname" placeholder="Username"  [(ngModel)]="uname" name="uname" required/><br><br>
+                <label for="pwd" [hidden]="true">Password: </label>
+                <input type="password" id="pwd" placeholder="Password" [(ngModel)]="pwd"  name="pwd" required/><br><br>
+                <span class="small" *ngIf="authenticate==0">
+                    * please enter a valid credentials
+                 </span><br>
+                <button mat-raised-button  type="submit" (click)="Login(uname,pwd)">LOGIN</button>
+            </form>
+        </div>
+    </ng-template>
+</div>
+
+ <app-userpage *ngIf="userpage" [ctest]="ptest"></app-userpage><!--//c to c passing -->
